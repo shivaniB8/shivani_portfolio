@@ -108,7 +108,7 @@ class _SideMenuState extends State<SideMenu> {
               child: Column(
                 children: [
                   MenuButtonSection(
-                    title: "Experience",
+                    title: "Browse",
                     selectedMenu: _selectedMenu,
                     menuIcons: _browseMenuIcons,
                     onMenuPress: onMenuPress,

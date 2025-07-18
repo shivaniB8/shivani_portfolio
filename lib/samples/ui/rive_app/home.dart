@@ -5,12 +5,12 @@ import 'package:flutter/physics.dart';
 import 'package:flutter/services.dart';
 import 'package:portfolio_shivani_bagal/samples/ui/rive_app/assets.dart'
     as app_assets;
-import 'package:portfolio_shivani_bagal/samples/ui/rive_app/navigation/custom_tab_bar.dart';
 import 'package:portfolio_shivani_bagal/samples/ui/rive_app/navigation/home_tab_view.dart';
 import 'package:portfolio_shivani_bagal/samples/ui/rive_app/navigation/side_menu.dart';
 import 'package:portfolio_shivani_bagal/samples/ui/rive_app/theme.dart';
 import 'package:rive/rive.dart' hide LinearGradient;
 
+import 'navigation/custom_tab_bar.dart';
 import 'on_boarding/onboarding_view.dart';
 
 // Common Tab Scene for the tabs other than 1st one, showing only tab name in center
@@ -50,11 +50,11 @@ class _RiveAppHomeState extends State<RiveAppHome>
   bool _showOnBoarding = false;
   Widget _tabBody = Container(color: RiveAppTheme.background);
   final List<Widget> _screens = [
-    const HomeTabView(),
     commonTabScene("Search"),
     commonTabScene("Timer"),
     commonTabScene("Bell"),
     commonTabScene("User"),
+    const HomeTabView(),
   ];
 
   final springDesc = const SpringDescription(

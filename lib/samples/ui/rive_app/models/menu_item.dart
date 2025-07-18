@@ -29,11 +29,14 @@ class MenuItemModel {
     ),
     MenuItemModel(
       title: "About",
-      riveIcon: TabItem(stateMachine: "CHAT_Interactivity", artboard: "CHAT"),
+      riveIcon: TabItem(stateMachine: "USER_Interactivity", artboard: "USER"),
     ),
     MenuItemModel(
       title: "Skills",
-      riveIcon: TabItem(stateMachine: "CHAT_Interactivity", artboard: "CHAT"),
+      riveIcon: TabItem(
+        stateMachine: "STAR_Interactivity",
+        artboard: "LIKE/STAR",
+      ),
     ),
 
     MenuItemModel(

@@ -104,15 +104,15 @@ class _OnBoardingViewState extends State<OnBoardingView>
                               width: 260,
                               padding: const EdgeInsets.only(bottom: 16),
                               child: const Text(
-                                "Learn design & code",
+                                "Welcome To Shivani's Profile",
                                 style: TextStyle(
                                   fontFamily: "Poppins",
-                                  fontSize: 60,
+                                  fontSize: 24,
                                 ),
                               ),
                             ),
                             Text(
-                              "Don’t skip design. Learn design and code, by building real apps with React and Swift. Complete courses about the best tools.",
+                              "Passionate Flutter developer, strong focus on building exceptional mobile applications. 3.5 years of experience inFlutter development. Environments focused on incorporating cutting-edge designs in mobile developmentindustry. Skilled in directing development with creative and performance-oriented approach. Well-organizedand customer-focused with proven skills in project management and team leadership.",
                               style: TextStyle(
                                 color: Colors.black.withOpacity(0.7),
                                 fontFamily: "Inter",
@@ -124,57 +124,43 @@ class _OnBoardingViewState extends State<OnBoardingView>
                       ),
                     ),
                     const SizedBox(height: 16),
-                    // const Spacer(),
-                    GestureDetector(
-                      child: MouseRegion(
-                        cursor: SystemMouseCursors.click,
-                        child: Container(
-                          width: 236,
-                          height: 64,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(30),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withOpacity(0.3),
-                                blurRadius: 10,
-                                offset: const Offset(0, 10),
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        GestureDetector(
+                          child: MouseRegion(
+                            cursor: SystemMouseCursors.click,
+                            child: Container(
+                              width: 200,
+                              height: 64,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(30),
                               ),
-                            ],
-                          ),
-                          child: Stack(
-                            children: [
-                              RiveAnimation.asset(
-                                app_assets.buttonRiv,
-                                fit: BoxFit.cover,
-                                controllers: [_btnController],
-                              ),
-                              Center(
-                                child: Transform.translate(
-                                  offset: const Offset(4, 4),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: const [
-                                      Icon(Icons.arrow_forward_rounded),
-                                      SizedBox(width: 4),
-                                      Text(
-                                        "Start the course",
-                                        style: TextStyle(
-                                          fontSize: 16,
-                                          fontFamily: "Inter",
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ],
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: const [
+                                  Icon(Icons.arrow_forward_rounded),
+                                  SizedBox(width: 4),
+                                  Text(
+                                    "Start the course",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontFamily: "Inter",
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
-                                ),
+                                ],
                               ),
-                            ],
+                            ),
                           ),
+                          onTap: () {
+                            _btnController.isActive = true;
+                          },
                         ),
-                      ),
-                      onTap: () {
-                        _btnController.isActive = true;
-                      },
+                        SizedBox(),
+                      ],
                     ),
                     const SizedBox(height: 16),
                     Text(
